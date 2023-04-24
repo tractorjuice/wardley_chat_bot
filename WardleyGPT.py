@@ -1,16 +1,12 @@
 # Importing required packages
 import streamlit as st
 from streamlit_chat import message
-import os
-import openai
-from dotenv import load_dotenv
-load_dotenv()
 import openai
 
-st.set_page_config(page_title="Chat with SimonGPT")
-st.title("Chat with SimonGPT")
+st.set_page_config(page_title="Chat with WardleyGPT")
+st.title("Chat with WardleyGPT")
 st.sidebar.markdown("Developed by Mark Craddock](https://twitter.com/mcraddock)", unsafe_allow_html=True)
-st.sidebar.markdown("Current Version: 0.0.2")
+st.sidebar.markdown("Current Version: 0.0.1")
 st.sidebar.markdown("Not optimised")
 st.sidebar.markdown("May run out of OpenAI credits")
 
@@ -69,5 +65,3 @@ if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):
         message(st.session_state["generated"][i], key=str(i))
         message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
-
- 
