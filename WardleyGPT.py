@@ -10,7 +10,8 @@ st.sidebar.markdown("Current Version: 0.0.1")
 st.sidebar.markdown("Not optimised")
 st.sidebar.markdown("May run out of OpenAI credits")
 
-model = "gpt-3.5-turbo"
+# Set OpenAI API model
+model = "gpt-4"
 
 def get_initial_message():
     messages=[
