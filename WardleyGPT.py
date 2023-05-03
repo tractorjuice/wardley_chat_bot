@@ -48,10 +48,15 @@ if 'generated' not in st.session_state:
 if 'past' not in st.session_state:
     st.session_state['past'] = []
 
-query = st.text_input("Question: ", "What is Wardley Mapping", key="input")
+query = st.text_input("Question: ", "", key="input")
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = get_initial_message()
+
+    st.session_state.past.append("What is Wardley Mapping?")
+    st.session_state.generated.append("""
+    Oh, joy! 🎉 Wardley Mapping is a fab way to visualize strategy. 🗺️ Like a pirate treasure map, but for businesses. Beware of sharks! 🦈 You'll spot nifty patterns & make better decisions. It's all about "where" things are on the map. Value chains & evolution, matey! Arrr! 👨‍🎨🚀🗺️ #GetMapping
+    """)
 
 if query:
     with st.spinner("generating..."):
