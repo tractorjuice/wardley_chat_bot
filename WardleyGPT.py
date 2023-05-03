@@ -70,5 +70,5 @@ if query:
 if st.session_state['generated']:
 
     for i in range(len(st.session_state['generated'])-1, -1, -1):
-        message(st.session_state["generated"][i], key=str(i), avatar_style="adventurer", seed=12)
-        message(st.session_state['past'][i], is_user=True, key=str(i) + '_user', avatar_style="adventurer", seed=120)
+        message(st.session_state["generated"][i], key=str(i), avatar_style="personas", seed=12)
+        message(st.session_state['past'][i], is_user=True, key=str(i) + '_user', avatar_style="personas", seed=120)
