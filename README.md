@@ -6,8 +6,7 @@ This code supports the blog post on creating a ChatBot using OpenAI. To learn mo
 <div align="center">
   <img src="images/wardley-gpt-1.png" alt="Wardley GPT-2 Chatbot">
 </div>
-\
-\
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wardleychatbot.streamlit.app/)
 
 ## Features
