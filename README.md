@@ -25,10 +25,9 @@ This code supports the blog post on creating a ChatBot using OpenAI. To learn mo
 ## Dependencies
 To run this code, you need the following Python packages:
 
-- os
-- re
 - openai
 - streamlit
+- streamlit-chat
 
 ### API Keys
 The application uses the OpenAI API. You will need to obtain an API key from OpenAI and set it in the Streamlit secrets manager.
