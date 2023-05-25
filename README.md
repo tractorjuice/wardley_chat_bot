@@ -18,9 +18,9 @@ This code supports the blog post on creating a ChatBot using OpenAI. To learn mo
 - A simple user interface built with Streamlit.
 
 ## How to Run
-1. Clone the repository.\
-2. Set the OpenAI API key in the Streamlit secrets manager.\
-3. Run the streamlit app using the command streamlit run WardleyGPT.py.\
+1. Clone the repository.
+2. Set the OpenAI API key in the Streamlit secrets manager.
+3. Run the streamlit app using the command streamlit run WardleyGPT.py.
 
 ## Dependencies
 To run this code, you need the following Python packages:
