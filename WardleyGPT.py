@@ -52,7 +52,7 @@ def get_chatgpt_response(messages, model=model):
     chat = ChatOpenAI(
         openai_api_key=OPENAI_API_KEY,
         model_name=model,
-        temperature=0.5,
+        temperature=0.0,
     )
 
     try:
