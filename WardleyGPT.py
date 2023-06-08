@@ -13,6 +13,7 @@ st.sidebar.markdown("May run out of OpenAI credits")
 
 # Set OpenAI API model
 model = "gpt-4"
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 def get_initial_message():
     messages=[
@@ -31,12 +32,36 @@ def get_initial_message():
     return messages
 
 def get_chatgpt_response(messages, model=model):
-    print("model: ", model)
-    response = openai.ChatCompletion.create(
-    model=model,
-    messages=messages
+    
+    # Convert messages to corresponding SystemMessage, HumanMessage, and AIMessage objects
+    new_messages = []
+    for message in messages:
+        role = message['role']
+        content = message['content']
+        
+        if role == 'system':
+            new_messages.append(SystemMessage(content=content))
+        elif role == 'user':
+            new_messages.append(HumanMessage(content=content))
+        elif role == 'assistant':
+            new_messages.append(AIMessage(content=content))
+    
+    chat = ChatOpenAI(
+        openai_api_key=OPENAI_API_KEY,
+        model_name=model,
+        temperature=0.5,
     )
-    return response['choices'][0]['message']['content']
+
+    try:
+        with get_openai_callback() as cb:
+            response = chat(new_messages)
+    except:
+        st.error("OpenAI Error")
+    if response is not None:
+        return response.content
+    else:
+        st.error("Error")
+        return "Error: response not found"
 
 def update_chat(messages, role, content):
     messages.append({"role": role, "content": content})
