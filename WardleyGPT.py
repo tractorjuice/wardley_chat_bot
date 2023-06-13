@@ -15,7 +15,14 @@ st.sidebar.markdown("Not optimised")
 st.sidebar.markdown("May run out of OpenAI credits")
 
 # Set OpenAI API model
-model = "gpt-4"
+#MODEL = "gpt-3"
+#MODEL = "gpt-3.5-turbo"
+#MODEL = "gpt-3.5-turbo-0613"
+#MODEL = "gpt-3.5-turbo-16k"
+#MODEL = "gpt-3.5-turbo-16k-0613"
+MODEL = "gpt-4"
+#MODEL = "gpt-4-0613"
+#MODEL = "gpt-4-32k-0613"
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 def get_initial_message():
@@ -89,7 +96,7 @@ if query:
     with st.spinner("generating..."):
         messages = st.session_state['messages']
         messages = update_chat(messages, "user", query)
-        response = get_chatgpt_response(messages, model)
+        response = get_chatgpt_response(messages, MODEL)
         messages = update_chat(messages, "assistant", response)
         st.session_state.past.append(query)
         st.session_state.generated.append(response)
