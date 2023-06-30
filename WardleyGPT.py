@@ -41,7 +41,7 @@ def get_initial_message():
         ]
     return messages
 
-def get_chatgpt_response(messages, model=model):
+def get_chatgpt_response(messages, model=MODEL):
     
     # Convert messages to corresponding SystemMessage, HumanMessage, and AIMessage objects
     new_messages = []
