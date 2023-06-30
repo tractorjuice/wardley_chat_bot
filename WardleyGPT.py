@@ -21,7 +21,6 @@ MODEL = "gpt-4-0613"
 #MODEL = "gpt-4-32k-0613"
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
-
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = MODEL
 
