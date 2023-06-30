@@ -5,7 +5,7 @@ import openai
 st.set_page_config(page_title="Chat with WardleyGPT")
 st.title("Chat with WardleyGPT")
 st.sidebar.markdown("Developed by Mark Craddock](https://twitter.com/mcraddock)", unsafe_allow_html=True)
-st.sidebar.markdown("Current Version: 0.1.4")
+st.sidebar.markdown("Current Version: 0.2.0")
 st.sidebar.markdown("Using GPT-4 API")
 st.sidebar.markdown("Not optimised")
 st.sidebar.markdown("May run out of OpenAI credits")
@@ -16,8 +16,8 @@ st.sidebar.markdown("May run out of OpenAI credits")
 #MODEL = "gpt-3.5-turbo-0613"
 #MODEL = "gpt-3.5-turbo-16k"
 #MODEL = "gpt-3.5-turbo-16k-0613"
-MODEL = "gpt-4"
-#MODEL = "gpt-4-0613"
+#MODEL = "gpt-4"
+MODEL = "gpt-4-0613"
 #MODEL = "gpt-4-32k-0613"
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
