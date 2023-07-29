@@ -15,9 +15,9 @@ st.sidebar.markdown("May run out of OpenAI credits")
 #MODEL = "gpt-3.5-turbo"
 #MODEL = "gpt-3.5-turbo-0613"
 #MODEL = "gpt-3.5-turbo-16k"
-#MODEL = "gpt-3.5-turbo-16k-0613"
+MODEL = "gpt-3.5-turbo-16k-0613"
 #MODEL = "gpt-4"
-MODEL = "gpt-4-0613"
+#MODEL = "gpt-4-0613"
 #MODEL = "gpt-4-32k-0613"
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
