@@ -1,6 +1,7 @@
 # Importing required packages
 import streamlit as st
 import openai
+import promptlayer
 
 st.set_page_config(page_title="Chat with WardleyGPT")
 st.title("Chat with WardleyGPT")
@@ -10,7 +11,8 @@ st.sidebar.markdown("Using GPT-4 API")
 st.sidebar.markdown("Not optimised")
 st.sidebar.markdown("May run out of OpenAI credits")
 
-# Set OpenAI API model
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+promptlayer.api_key = st.secrets["PROMPTLAYER"]
 #MODEL = "gpt-3"
 #MODEL = "gpt-3.5-turbo"
 #MODEL = "gpt-3.5-turbo-0613"
@@ -19,7 +21,9 @@ MODEL = "gpt-3.5-turbo-16k-0613"
 #MODEL = "gpt-4"
 #MODEL = "gpt-4-0613"
 #MODEL = "gpt-4-32k-0613"
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+
+# Swap out your 'import openai'
+openai = promptlayer.openai
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = MODEL
@@ -69,6 +73,7 @@ if prompt := st.chat_input("What is up?"):
                 for m in st.session_state.messages
             ],
             stream=True,
+            pl_tags=["wardleychatbot"],
         ):
             full_response += response.choices[0].delta.get("content", "")
             message_placeholder.markdown(full_response + "▌")
