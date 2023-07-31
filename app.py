@@ -45,7 +45,7 @@ if "messages" not in st.session_state:
     st.session_state.messages.append(   
         {
             "role": "user",
-            "content": "I want to learn about Wardley Mapping"
+            "content": "Tell me 5 things about Wardley Mapping"
         })
     st.session_state.messages.append(
         {
