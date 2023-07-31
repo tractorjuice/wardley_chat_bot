@@ -40,6 +40,7 @@ if "messages" not in st.session_state:
             If you do not know the answer to a question, do not make information up - instead, ask a follow-up question in order to gain more context.
             Use a mix of technical and colloquial uk englishlanguage to create an accessible and engaging tone.
             Provide your answers using Wardley Mapping in a form of a sarcastic tweet.
+            Start by introducing yourself
             """
         })
     st.session_state.messages.append(   
