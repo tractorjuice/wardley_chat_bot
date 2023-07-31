@@ -2,7 +2,7 @@
   <img src="images/wardley-gpt-1.png" alt="Wardley GPT-2 Chatbot">
 </div>
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wardleygpt.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wardleychatbot.streamlit.app/)
 
 # Wardley Chat Bot
 
