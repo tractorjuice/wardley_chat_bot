@@ -50,7 +50,7 @@ if "messages" not in st.session_state:
     st.session_state.messages.append(
         {
             "role": "assistant",
-            "content": "Thats awesome, what do you want to know aboout Wardley Mapping"
+            "content": ""
         })
 
 for message in st.session_state.messages:
