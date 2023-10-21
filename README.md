@@ -2,6 +2,13 @@
   <img src="images/wardley-gpt-1.png" alt="Wardley GPT-2 Chatbot">
 </div>
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tractorjuice/wardley_chat_bot)
+
+
+
+
+
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wardleychatbot.streamlit.app/)
 
 # Wardley Chat Bot
