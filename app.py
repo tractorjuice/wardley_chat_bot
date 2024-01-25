@@ -13,9 +13,13 @@ st.sidebar.markdown("May run out of OpenAI credits")
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 promptlayer.api_key = st.secrets["PROMPTLAYER"]
+
 #MODEL = "gpt-3.5-turbo-16k" # Legacy
-MODEL = "gpt-3.5-turbo-1106" # Latest model
-#MODEL = "gpt-4-1106-preview"
+#MODEL = "gpt-3.5-turbo-1106" # Current model
+MODEL = "gpt-3.5-turbo-0125" # Latest model
+#MODEL = "gpt-4-0125-preview" Latest model
+
+DEBUG = True # True to overwrite files that already exist
 
 # Swap out your 'import openai'
 openai = promptlayer.openai
