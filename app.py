@@ -14,10 +14,14 @@ st.sidebar.markdown("May run out of OpenAI credits")
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 promptlayer.api_key = st.secrets["PROMPTLAYER"]
 
-#MODEL = "gpt-3.5-turbo-16k" # Legacy
-#MODEL = "gpt-3.5-turbo-1106" # Current model
-MODEL = "gpt-3.5-turbo-0125" # Latest model
-#MODEL = "gpt-4-0125-preview" Latest model
+# gpt-3.5-turbo, gpt-4, and gpt-4-turbo-preview point to the latest model version
+#MODEL = "gpt-3.5-turbo" # 4K, Sept 2021
+MODEL = "gpt-3.5-turbo-16k" # 16K, Sept 2021
+#MODEL = "gpt-3.5-turbo-1106" # 16K, Sept 2021
+#MODEL = "gpt-4" # 8K, Sept 2021
+#MODEL = "gpt-4-32k" # 32K, Sept 2021
+#MODEL = "gpt-4-turbo-preview" # 128K, Apr 2023
+#MODEL = "gpt-4-1106-preview" # 128K, Apr 2023
 
 DEBUG = True # True to overwrite files that already exist
 
