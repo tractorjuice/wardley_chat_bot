@@ -15,9 +15,9 @@ OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 promptlayer.api_key = st.secrets["PROMPTLAYER"]
 
 # gpt-3.5-turbo, gpt-4, and gpt-4-turbo-preview point to the latest model version
-#MODEL = "gpt-3.5-turbo" # 4K, Sept 2021
-MODEL = "gpt-3.5-turbo-16k" # 16K, Sept 2021
-#MODEL = "gpt-3.5-turbo-1106" # 16K, Sept 2021
+#MODEL = "gpt-3.5-turbo" # 4K, Sept 2021. Legacy. Currently points to gpt-3.5-turbo-0613.
+#MODEL = "gpt-3.5-turbo-16k" # 16K, Sept 2021. Legacy. Snapshot of gpt-3.5-turbo from June 13th 2023. Will be deprecated on June 13, 2024
+MODEL = "gpt-3.5-turbo-1106" # 16K, Sept 2021. New Updated GPT 3.5 Turbo. The latest GPT-3.5 Turbo model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Returns a maximum of 4,096 output tokens.
 #MODEL = "gpt-4" # 8K, Sept 2021
 #MODEL = "gpt-4-32k" # 32K, Sept 2021
 #MODEL = "gpt-4-turbo-preview" # 128K, Apr 2023
